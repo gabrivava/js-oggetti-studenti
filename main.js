@@ -39,6 +39,23 @@ var classe = [
     }
 ];
 
+// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
+var nomeUtente = prompt('inserisci il tuo nome');
+var cognomeUtente = prompt('insrrisci il tuo cognome');
+var etàUtente;
+while (isNaN(etàUtente)) {
+    alert('devi inserire un numero');
+    etàUtente = Number(prompt('inserisci la tua età'));
+}
+
+var datoUtente = {
+    nome: nomeUtente,
+    cognome: cognomeUtente,
+    età: etàUtente
+}
+classe.push(datoUtente);
+console.log(classe);
+
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 var datiClasseEl = document.getElementById('dati_classe');
 for (var i = 0; i < classe.length; i++) {
@@ -59,4 +76,3 @@ for (var i = 0; i < classe.length; i++) {
         )
     }
 }
-// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
