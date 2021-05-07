@@ -1,7 +1,5 @@
 /* 
 
-Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
-
 //Creare un oggetto che descriva uno studente, con le seguenti proprietà:
 /* nome,
 cognome
@@ -33,14 +31,21 @@ var classe = [
         nome: 'luigi',
         cognome: 'rossi',
         età: 55
+    },
+    {
+        nome: 'emiliano',
+        cognome: 'cantu',
+        età: 27
     }
 ];
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 var datiClasseEl = document.getElementById('dati_classe');
 for (var i = 0; i < classe.length; i++) {
+
     var studente = classe[i];
-    datiClasseEl.innerHTML =
+
+    datiClasseEl.innerHTML +=
     `
     <h4> Studente ${i}: </h4>
     `
@@ -54,3 +59,4 @@ for (var i = 0; i < classe.length; i++) {
         )
     }
 }
+// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
