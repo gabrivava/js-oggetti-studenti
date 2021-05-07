@@ -42,7 +42,7 @@ var classe = [
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
 var nomeUtente = prompt('inserisci il tuo nome');
 var cognomeUtente = prompt('insrrisci il tuo cognome');
-var etàUtente;
+var etàUtente = Number(prompt('inserisci la tua età'));
 while (isNaN(etàUtente)) {
     alert('devi inserire un numero');
     etàUtente = Number(prompt('inserisci la tua età'));
@@ -65,14 +65,9 @@ for (var i = 0; i < classe.length; i++) {
     datiClasseEl.innerHTML +=
     `
     <h4> Studente ${i}: </h4>
+    <p> Nome: ${studente.nome} </p>
+    <p> Cognome: ${studente.cognome} </p>
     `
-    
-    for (var key in studente) {
-        console.log(key, studente[key]);
-        datiClasseEl.insertAdjacentHTML('beforeend', 
-        `
-        <p> ${key}: ${studente[key]} </p>
-        `
-        )
-    }
+
 }
+
